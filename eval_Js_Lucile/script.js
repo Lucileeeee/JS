@@ -4,7 +4,6 @@ let string = "j'adore js";
 let bool = false;
 //console.log(number, string, bool);
 
-
 //? Exo 2 : Écrire un script qui convertit des degrés Celsius en Fahrenheit.
 function convertFarenheit(tempCelsius){
     fareinheit = (tempCelsius - 32) / 1.8 ;
