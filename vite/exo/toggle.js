@@ -32,7 +32,12 @@ VANTA.CLOUDS({
     minHeight: 200.00,
     minWidth: 200.00
 })
-
+/*
+* 'fonction' qui surveille l'avancement du scroll et l'affiche dans une div
+*  la variable scrollMax est la taille du body moins celle de la fenetere
+* la variable onEstOu rend le pourcentage d'avancement du scroll
+* et on donne cette taille à la width bar 
+*/ 
 let bar = document.getElementsByClassName('bar');
 document.addEventListener('scroll', (e)=>{
     console.log(`${document.body.scrollHeight}
