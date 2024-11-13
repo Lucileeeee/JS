@@ -1,5 +1,10 @@
+/*
+* 3 liens cliquables  
+* pour 1: ajouter une class
+* pour 2: supprimer une class
+* pour 3: toggle une class
+*/
 let liens = document.body.getElementsByTagName('a');
-
 liens[0].addEventListener('click', (e)=>{
     liens[0].setAttribute("id", "ajouterClass");
 })
@@ -9,11 +14,12 @@ liens[1].addEventListener('click', (e)=>{
 liens[2].addEventListener('click', (e)=>{
     liens[2].classList.toggle('toggleClass');
 })
-
+/*
+* création d'une image au clique dans le document
+* placement de l'image sur la souris (clientX et clientY)
+* on divise la hauteur et largeur de l'image par deux pour la centrer (sinon ça commence en haut à gauche)
+*/
 document.addEventListener('click',(eventClicke)=>{
-/*     console.log(eventClicke);
-    console.log(eventClicke.clientX);
-    console.log(eventClicke.clientY); */
     let img = document.createElement('img');
     img.setAttribute('src', 'https://picsum.photos/200');
     document.body.append(img);
