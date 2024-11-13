@@ -54,5 +54,13 @@ let nomClient = "Madame Michu";
 let joke = `Qu'est ce qu'une pizza dit à une autre pizza qui lui demandait 
 des conseils ? Suis ta pâte et tout ira bien !`;
 let phrase = `Bonjour ${nomClient} votre commande N° ${commandeRef} vous sera livré à ${heureLivraison}, à votre adresse ${adresseClient}. ${joke}`;
-
 console.log(phrase);
+
+// quiz 1 : la variable wtf n'existe que dans la fonction buggyFunction, et elle est dejà afficher dans la console grace à l'appel de la fonction. 
+// quiz 2 : le premier something à 44 n'est disponible qu'en dehors de la fonction.
+// le console.log(something) dans functionParent va afficher 9,
+// par contre lesNews n'est pas encore définit à la ligne en dessous, on ne peut pas le console.loger
+// ensuite la fonctionBugEnfant initialise lesNews mais ne l'affiche nulpart, ni ne la retourne. 
+// l'appel de functionParent plante à cause de lesNews et le console.log(something) nous montre le something initialisé en dehors des fonctions.
+
+
