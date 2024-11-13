@@ -10,3 +10,26 @@
     color: pink;
     font-weight: 900;
 }
+.vanta{
+    height: 200px;
+    width: 100%;
+}
+
+.boxBar {
+    z-index: 1;
+    width: 100%;
+    border: 5px solid blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.bar {
+    height: 21px;
+    background: turquoise;
+    width: 0%;
+}
+
+body{
+    height: 1200px;
+}
