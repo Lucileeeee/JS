@@ -22,7 +22,10 @@ document.addEventListener('click',(eventClicke)=>{
     img.style.left = eventClicke.clientX - img.width/2 + "px";    
 })
 
-
+/*
+*Librairie Vanda pour mettre des animations 
+* mettre le lien script dans le html (voir en dessous du link css)
+*/
 let vanta = document.body.getElementsByClassName('vanta');
 VANTA.CLOUDS({
     el: vanta[0],
@@ -32,6 +35,7 @@ VANTA.CLOUDS({
     minHeight: 200.00,
     minWidth: 200.00
 })
+
 /*
 * 'fonction' qui surveille l'avancement du scroll et l'affiche dans une div
 *  la variable scrollMax est la taille du body moins celle de la fenetere
