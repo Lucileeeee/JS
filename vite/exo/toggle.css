@@ -1,0 +1,12 @@
+#ajouterClass{
+    color: red;
+    font-weight: 900;
+}
+#supprimerClass{
+    color: green;
+    font-weight: 900;
+}
+.toggleClass{
+    color: pink;
+    font-weight: 900;
+}

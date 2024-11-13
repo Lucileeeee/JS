@@ -64,7 +64,7 @@ tabP.map((p)=> p.style.color="red");
 */ 
 let bool = false;
 let h1 = document.getElementsByTagName('h1');
-console.log(h1[0]);
+
 h1[0].addEventListener("click", (e) => {
     h1[0].innerText= bool? '-----': 'Bonjour';
     bool = !bool;
