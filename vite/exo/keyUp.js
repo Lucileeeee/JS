@@ -1,13 +1,13 @@
 /*
 *  on écoute les touches du clavier
-* et on retranscrit dans un p le contenu de l'input
+* et on retranscrit tout de suite dans un p le contenu de l'input
 */
 let input = document.getElementById('name');
-addEventListener("keyup", (event) => {
+/*addEventListener("keyup", (event) => {
     let p = document.createElement('p');
     p.innerText = input.value;
     document.body.append(p);
-});
+}); */
 
 /*
 *  on récupère le bouton du html
@@ -26,12 +26,26 @@ addEventListener("keyup", (event) => {
 });
 
 /*
-* Enregistrer en locaStorage la value de l'input 
-* et réstituer dans un p 
+* Enregistrer en locaStorage la value de l'input et réstituer dans un p quand on clique sur entré
+* la fonction restituerDansP récupère le paragraphe, le met en rouge 
+* et y inscrit la valeur du localStorage
 */
-let p = document.getElementsByTagName('p');
+function restituerDansP(){
+    let p = document.getElementsByTagName('p');
+    p[0].style.color = "red";
+    p[0].innerText = localStorage.getItem('clef');
+}
+/*
+*  On écoute le clavier
+* on récupère du localStorage, on y enregistre l'input value
+* si la touche Entrée est tapé alors on appelle la fonction précédente
+*/
 addEventListener("keyup", (event) => {
-    let aVenir = localStorage.getItem('clef');
+    localStorage.getItem('clef');
     localStorage.setItem('clef', input.value);
-    p[0].innerText = aVenir;
+    if (event.key === "Enter") {
+        restituerDansP(); 
+    }
 });
+
+
