@@ -39,4 +39,9 @@ try{
 }finally{
     alert(`Ce message s'affichera quoiqu'il arrive`);
 }
-
+/*
+*exemple de maxime pour l'utilisation du finally:
+* on veux laisser 5 tentative de connexion à notre utilisateur
+* le try va essayer, le catch gerer les mauvais mot de passe etc
+* et dans le finnally on incrémentera le nombre d'essaye
+*/
