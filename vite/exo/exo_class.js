@@ -1,10 +1,10 @@
-class Imc {
-    /**
+   /**
      * 
-     * @param {*} nom 
-     * @param {*} poid 
-     * @param {*} taille 
+     * @param {string} nom 
+     * @param {number} poid 
+     * @param {number} taille 
      */
+class Imc {
     constructor(nom, poid, taille) {
     this.nom = nom;
     this.poid = poid;
