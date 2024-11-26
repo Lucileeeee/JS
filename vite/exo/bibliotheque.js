@@ -23,15 +23,15 @@ class Bibliotheque{
     emprunterLivre(titre){
         try{
             console.log('titre :',titre);
-            let trouve = this.livres.find((element) => element.titre == titre);
+            let trouve = this.livres.find((element) => element.titre === titre);
             trouve.emprunter();
             console.log(trouve.disponible);
             if(!trouve){
-                console.log('problemos');
+                throw new Error (`Le livre ${titre} n'existe pas`);
             }
         }
         catch(error){
-            console.error('Erreur : ', error);
+            console.error('Erreur : ', error.message);
         }
     }
 }
