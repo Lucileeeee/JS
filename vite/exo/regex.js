@@ -15,13 +15,13 @@ let pasSpecial = document.getElementById('pasSpecial');
 //? regex du mail:
 mail.addEventListener("keyup", (event) => {
     if(regex.test(mail.value)){
-        mail.style.color='green';
+        mail.style.backgroundColor='lightgreen';
     } else if (!regex.test(mail.value)){
-        mail.style.color='red';
+        mail.style.backgroundColor='red';
     }
 });
 
-//? regex du password pour vérifier la longueur, qu'il contient un chiffre et un caractère spéciale
+//? regex du password pour vérifier la longueur, qu'il contient un chiffre et un caractère
 password.addEventListener("keyup", (event) => {
     if (password.value.length <= 6){
         tropCourt.innerText='Le Mot De Passe est trop court';
