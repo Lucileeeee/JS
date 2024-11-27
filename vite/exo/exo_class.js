@@ -90,7 +90,7 @@ console.log(pme.bilanCalculed());
 console.log(Employee.length);
 
 //!partie correction:
-class Employee {
+class Employe {
     constructor(nom, prenom, age, salaireMensuel) {
         this._nom = nom;
         this._prenom = prenom;
@@ -111,7 +111,7 @@ class Employee {
     }
 }
 
-class Pme {
+class Pm {
     constructor(nom, equipe, ventes, coutsFixes, achats) {
         this._nom = nom;
         this._equipe = equipe;

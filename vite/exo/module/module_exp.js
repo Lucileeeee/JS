@@ -1,11 +1,9 @@
 let h1 = document.querySelector('h1');
 
-
 export function nomFonction(name) {
     console.log('Bonjour depuis module_exp.js '+ name);
-    // alert(`Bonjour ${name}`)
-    // return `Bonjour depuis hello.js : ${name}`
 }
+
 export async function chuckNoris(){
     try{
         const data = await fetch ('https://api.chucknorris.io/jokes/random');
