@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+      <!-- Main Content -->
+      <div id="app" class="container min-vh-100">
+        <h1>Ici TP-5 Todo List avec Firebase Real Time Database</h1>
+        <h2>Liste des tâches pour XP en JS</h2>
+        <h3>Objectifs level Mage Noir (lvl 99)</h3>
+        
+        <!-- Section de hhero -->
+        <div class="mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Ajouter une nouvelle tâche" />
+            <button id="addTaskButton" class="btn btn-primary mt-2">Ajouter</button>
+        </div>
+        
+        <ul id="taskList" class="list-group">
+        <!-- Les tâches seront ajoutées ici dynamiquement -->
+        </ul>
+    </div>
+        <!-- Footer -->
+    <footer></footer>
+        <!-- firebase sdk link goes here -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+
+        <script type="module" src="firebase.js"></script>
+</body>
+</html>
