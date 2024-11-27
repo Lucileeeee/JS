@@ -13,6 +13,15 @@ class Utilisateur {
             console.log("Erreur : Contenu inapproprié détecté.");
         }
     }
+    rejoindreGroupe(groupe){
+        if((!groupe.membres.includes(this))){
+            console.log('ajoutons le membre', this, 'au groupe', groupe);
+            groupe.ajoutermembre(this);
+        } else if(groupe.membres.includes(this)){
+            console.log('vous faites déjà partie du groupe');
+        }
+
+    }
 }
 
 class Publication{
@@ -72,6 +81,7 @@ console.log(bidule.publications[0]);
 console.log('utilisateur publie un contenu INvalide : ');
 bidule.publier('fuck');
 
+
 //! création de groupe:
 console.log('PARTIE GROUPE :');
 let groupeA = new Groupe('Groupe A');
@@ -96,4 +106,8 @@ publi.ajouterCommentaire('idiot');
 const commentaireInsultant = new Commentaire(bidule, "C'est stupide !");
 publi.ajouterCommentaire(commentaireInsultant.contenu);
 
-
+//! partie rejoindre Groupe:
+//? déjà membre: 
+bidule.rejoindreGroupe(groupeA);
+//? rajoute membre: 
+bidule.rejoindreGroupe(groupeB);
