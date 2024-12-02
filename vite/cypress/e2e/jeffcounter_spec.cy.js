@@ -29,12 +29,14 @@ describe("Tests de l'application Counter", () => {
 
     it("devrait avoir les logos et les liens corrects check des classes CSS, attributs href", () => {
         cy.get(".logo").should("have.length", 2);
+        //.eq(0) = premier element du tableau .logo
         cy.get(".logo").eq(0).should("be.visible");
+         //.eq(0) = deuxieme element du tableau .logo
         cy.get(".logo").eq(1).should("be.visible");
         cy.get(".logo").eq(0).should("have.attr", "alt", "Vite logo");
         cy.get(".logo").eq(1).should("have.attr", "alt", "JavaScript logo");
         cy.get(".read-the-docs").should("have.text", "Click on the Vite logo to learn more");
-        // Vérification que les logos sont des liens avec un attribut href avec les bonnes URL
+        // Vérification que les logos ont parents avec des liens attribut href avec les bonnes URL
         cy.get(".logo").eq(0).parents('a').should("have.attr", "href", "https://vitejs.dev");
         cy.get(".logo").eq(1).parents('a').should("have.attr", "href", "https://developer.mozilla.org/en-US/docs/Web/JavaScript");
     });

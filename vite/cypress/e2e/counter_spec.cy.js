@@ -35,4 +35,16 @@ describe("Tests de l'application Counter", () => {
 /* Exemple de check si les logo sont bien visible 
 on peut voir si ils existent dans le DOM aussi 
 mais ptet que on sait pas le lien d'une src d'image a cassé ou ce genre de truc 
-cy.get(".logo").eq(0).should("be.visible"); */
+cy.get(".logo").eq(0).should("be.visible");
+
+//!version de Yass:
+    it('tester des cliques multiples aléatoire',()=>{
+        let randomNumber= Math.floor(Math.random()*(10-0)+0)
+        cy.visit('http://localhost:5173/')
+        for(let i=0;i<randomNumber;i++){
+            cy.get('#counter').click();
+        }
+        cy.get('#counter').contains(`count is ${randomNumber}`);
+    });
+    
+*/
