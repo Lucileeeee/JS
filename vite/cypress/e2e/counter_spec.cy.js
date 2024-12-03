@@ -29,6 +29,11 @@ describe("Tests de l'application Counter", () => {
         /* Exemple de comment checker si le premier Element avec la classe logo, sont parent est une balise <a> qui a un attribut href avec un lien de site  */
         cy.get(".logo").eq(0).parents('a').should("have.attr", "href", "https://vite.dev");
     });
+
+    it("l'app doit additionner deux nombres", ()=>{
+        cy.visit("http://localhost:5173/");
+        cy.get("#firstNumber").value
+    })
 });
 
 
