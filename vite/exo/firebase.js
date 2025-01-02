@@ -13,9 +13,7 @@ const app = initializeApp(firebaseConfig);
 
 
 console.log(`chachat d'amour`);
-//!id du projet: projetyellow-80606
 
-//! https://projetyellow-80606-default-rtdb.europe-west1.firebasedatabase.app/
 
 
 
